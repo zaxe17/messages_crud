@@ -1,0 +1,36 @@
+input, textarea {
+    box-shadow: rgba(136, 165, 191, 0.48) 10px 4px 24px 0px, rgba(255, 255, 255, 0.8) -10px -4px 24px 0px;
+    border: none;
+    padding: 6px 12px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+}
+
+.gradient-text, .parag {
+    background: linear-gradient(135deg, #c0392b, #2c2c2c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.link {
+    background: linear-gradient(90deg, #ffffff, #c0392b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-name {
+    font-size: 20px;
+}
+
+.button {
+    box-shadow: rgba(136, 165, 191, 0.48) 10px 4px 24px 0px, rgba(255, 255, 255, 0.8) -10px -4px 24px 0px;
+    background: linear-gradient(135deg, #c0392b, #2c2c2c);
+    border: none
+}

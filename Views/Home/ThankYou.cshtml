@@ -1,0 +1,15 @@
+﻿@model messages_crud.Models.MessageViewModel;
+
+@{
+    ViewData["Title"] = "Thank You";
+}
+
+<div class="d-flex flex-column justify-content-center align-items-center" style="min-height: calc(100vh - 60px);">
+    <div class="text-center p-5" style="box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; border-radius: 10px;">
+        <i class="fas fa-check-circle text-success" style="font-size: 80px;"></i>
+        <h1 class="gradient-text mt-4">Thank You so much</h1>
+        <h3 class="mb-3">@Model.FullName! 🎉</h3>
+        <p class="text-muted">Your message has been submitted successfully.</p>
+        <a href="/" class="btn btn-primary mt-3 button">Go Back Home</a>
+    </div>
+</div>

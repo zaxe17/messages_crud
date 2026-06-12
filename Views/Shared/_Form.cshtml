@@ -1,0 +1,19 @@
+﻿@model messages_crud.Models.MessageViewModel;
+
+<form method="post" style="width:40%; box-shadow: rgb(204, 219, 232) 10px 10px 20px 0px inset, rgba(255, 255, 255, 0.5) -10px -10px 20px 3px inset; border-radius: 10px;">
+    <div class="d-flex flex-column justify-content-center align-items-center p-5">
+        <h1 class="gradient-text" style="font-size: 40px;">Message Me</h1>
+        <p class="mb-5 parag">Feel free to say anything</p>
+        <form method="post" asp-controller="Home" asp-action="Index" class="w-100">
+            @Html.AntiForgeryToken()
+
+            <input type="text" name="FullName" class="mb-3 w-100" placeholder="Full Name" asp-for="FullName" required>
+
+            <input type="email" name="Email" class="mb-3 w-100" placeholder="Email" asp-for="Email" required>
+
+            <textarea name="Content" rows="3" placeholder="Your message..." class="w-100" style="resize: none;" asp-for="Content"></textarea>
+
+            <button type="submit" class="btn btn-primary btn-md w-100 mt-4 button">Submit Message</button>
+        </form>
+    </div>
+</form>

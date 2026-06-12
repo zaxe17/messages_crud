@@ -1,0 +1,56 @@
+﻿@model List<messages_crud.Models.Entities.Message>
+
+@{
+    ViewData["Title"] = "MessageMe";
+}
+
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var message in Model)
+                {
+                    <tr>
+                        <td>@message.FullName</td>
+                        <td>@message.Email</td>
+                        <td>@message.Content</td>
+                        <td>@message.CreatedAt</td>
+                        <td>@(message.IsRead ? "Read" : "Unread")</td>
+                        <td>
+                            <form asp-action="MarkAsRead" asp-controller="Home" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@message.Id" />
+                                <button type="submit" class="btn btn-sm btn-primary">
+                                    View
+                                </button>
+                            </form>
+                            <form asp-action="DeleteMessage" asp-controller="Home" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@message.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center">No messages found</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
