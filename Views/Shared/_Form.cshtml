@@ -7,7 +7,7 @@
         <form method="post" asp-controller="Home" asp-action="Index" class="w-100">
             @Html.AntiForgeryToken()
 
-            <input type="text" name="FullName" class="mb-3 w-100" placeholder="Full Name" asp-for="FullName" required>
+            <input type="text" name="FullName" id="FullName" class="mb-3 w-100" placeholder="Full Name" asp-for="FullName" required>
 
             <input type="email" name="Email" class="mb-3 w-100" placeholder="Email" asp-for="Email" required>
 
@@ -17,3 +17,9 @@
         </form>
     </div>
 </form>
+
+<script>
+    document.getElementById("FullName").addEventListener("input", function () {
+        this.value = this.value.replace(/\b\w/g, c => c.toUpperCase());
+    });
+</script>
