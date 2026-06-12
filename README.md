@@ -9,7 +9,7 @@ once the user clicks on the "Submit" button, the output will be displayed as sho
 ![read](./Output/read.png)
 
 # Update
-![update](./Output/update status.png)
+![update](./Output/update_status.png)
 
 # Delete
 ![delete](./Output/delete.png)
